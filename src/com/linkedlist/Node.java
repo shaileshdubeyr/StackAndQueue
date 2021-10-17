@@ -1,27 +1,38 @@
 package com.linkedlist;
 
-public class Node<k> {
-	private k data;
-	private Node next;
+public class Node<K> implements INode<K> {
+	private K key;
+	private Node<K> next;
 	
-	public Node(k data) {
-		this.data = data;
+	public Node(K key) {
+		this.key = key;
 		this.next = null; 
 	}
-	
-	public k getData(){
-		return data;
+
+	@Override
+	public K getKey() {
+		// TODO Auto-generated method stub
+		return key;
 	}
-	
-	public void setData(k data) {
-		this.data = data;
+
+	@Override
+	public void setKey(K key) {
+		// TODO Auto-generated method stub
+		this.key = key;
+		
 	}
-	
-	public Node getNext() {
+
+	@Override
+	public INode<K> getNext() {
+		// TODO Auto-generated method stub
 		return next;
 	}
+
+	@Override
+	public void setNext(INode next) {
+		this.next = (Node<K>) next;
+		
+	}	
 	
-	public void setNext(Node next) {
-		this.next = next;
-	}
+	
 }
