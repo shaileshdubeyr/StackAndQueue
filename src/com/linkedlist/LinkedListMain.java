@@ -2,7 +2,6 @@ package com.linkedlist;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.extension.TestInstancePostProcessor;
 
 public class LinkedListMain {
 	@Test
@@ -96,7 +95,7 @@ public class LinkedListMain {
 	}
 	
 	@Test
-	public void giveElementFindKeyNodeShouldPassLinkedListResult() {
+	public void giveElementInsertNewNodeAfterKeyNodeShouldPassLinkedListResult() {
 		Node<Integer> myFirstNode = new Node<>(70);
 		Node<Integer> mySecondNode = new Node<>(30);
 		Node<Integer> myThirdNode = new Node<>(56);
@@ -105,7 +104,8 @@ public class LinkedListMain {
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
 		INode getNode = myLinkedList.findNode();
-		System.out.println("find key is "+getNode.getKey());
+		Node<Integer> newNode = new Node<>(40);
+		myLinkedList.insert(getNode, newNode);
 		myLinkedList.printMyNodes();
 		boolean result = myLinkedList.head.equals(myThirdNode) &&
 						 myLinkedList.head.getNext().equals(mySecondNode);
