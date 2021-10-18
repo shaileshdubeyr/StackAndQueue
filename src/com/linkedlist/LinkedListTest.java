@@ -62,11 +62,11 @@ public class LinkedListTest {
 	
 	public INode popLastNode() {
 		INode tempNode = head;
-		while(!tempNode.getNext().equals(tail)) {
+		while(tempNode.getNext() != null) {
 			tempNode = tempNode.getNext();
 		}
 		this.tail = tempNode;
-		tempNode = tempNode.getNext();
+		 head.getNext().setNext(null);
 		return tempNode;
-	}
+	} 
 }
