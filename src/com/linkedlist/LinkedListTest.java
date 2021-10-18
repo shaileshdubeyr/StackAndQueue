@@ -1,5 +1,7 @@
 package com.linkedlist;
 
+import java.util.Scanner;
+
 public class LinkedListTest {
 	public INode head;
 	public INode tail;
@@ -67,6 +69,16 @@ public class LinkedListTest {
 		}
 		this.tail = tempNode;
 		 head.getNext().setNext(null);
+		return tempNode;
+	}
+	public INode findNode() {
+		System.out.println("enter the key to search node");
+		Scanner sc = new Scanner(System.in);
+		int searchValue  = sc.nextInt();
+		INode tempNode = head;
+		while(!tempNode.getKey().equals(searchValue) ) {
+			tempNode = tempNode.getNext();
+		}
 		return tempNode;
 	} 
 }
