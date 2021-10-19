@@ -1,7 +1,6 @@
 package com.linkedlist;
 
 import java.util.Scanner;
-
 public class LinkedListTest {
 	public INode head;
 	public INode tail;
@@ -73,15 +72,19 @@ public class LinkedListTest {
 	}
 	
 	public void deleteInbetween(INode getNode, INode setNode) {
+		INode temp = this.head;
+		getNode.setNext(setNode);
+	}
+	
+	public void size() {
 		int i = 0;
 		final int ONE = 1;
 		INode temp = this.head;
-		getNode.setNext(setNode);
 		while(temp.getNext() != null) {
 			temp = temp.getNext();
 			i++;
 		}
-		System.out.println(""+(i+ONE));		
+		System.out.println("the total nodes are "+(i+ONE));		
 	}
 	
 	public INode findNode() {
@@ -93,5 +96,5 @@ public class LinkedListTest {
 			tempNode = tempNode.getNext();
 		}
 		return tempNode;
-	}	
+	}
 }

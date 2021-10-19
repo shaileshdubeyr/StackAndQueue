@@ -17,7 +17,6 @@ public class LinkedListMain {
 		boolean result = myLinkedList.head.equals(myThirdNode) && 
 						 myLinkedList.head.getNext().equals(mySecondNode)&&
 						 myLinkedList.tail.equals(myFirstNode);
-		
 		Assert.assertTrue(result);
 	}
 
@@ -33,8 +32,7 @@ public class LinkedListMain {
 		myLinkedList.printMyNodes();
 		boolean result = myLinkedList.head.equals(myFirstNode) && 
 						 myLinkedList.head.getNext().equals(mySecondNode) &&
-						 myLinkedList.tail.equals(myThirdNode);
-		
+						 myLinkedList.tail.equals(myThirdNode);		
 		Assert.assertTrue(result);
 	}
 	
@@ -103,9 +101,10 @@ public class LinkedListMain {
 		Node<Integer> newNode = new Node<>(40);
 		myLinkedList.deleteInbetween(getNode,myFirstNode);
 		myLinkedList.printMyNodes();
+		myLinkedList.size();
 		boolean result = myLinkedList.head.equals(myThirdNode) &&
 						 myLinkedList.head.getNext().equals(mySecondNode);
 						 myLinkedList.tail.equals(mySecondNode);	
-		Assert.assertTrue(result);
+		Assert.assertTrue(result); 
 	}
 }
