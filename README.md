@@ -1,2 +1,1 @@
-# LinkedListPractise
 # StackAndQueue
