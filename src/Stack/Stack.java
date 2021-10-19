@@ -23,4 +23,8 @@ public class Stack {
 		return myLinkedList.pop();
 		
 	}
+	public void enqueu(INode myNode) {
+		myLinkedList.appendNodes(myNode);
+		
+	}
 }
