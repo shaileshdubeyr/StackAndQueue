@@ -116,7 +116,7 @@ public class LinkedListTest {
 					this.head.setNext(tempNode);
 					System.out.println("this");
 					System.out.println(newNode.getKey());
-					if(tempNode.getNext() == null)
+					if (tempNode.getNext() == null)
 						break;
 				} else {
 					INode temp2 = this.head;

@@ -16,6 +16,7 @@ public class MyStackTest {
 		myStack.enqueu(mySecondNode);
 		myStack.enqueu(myThirdNode);
 		INode peak = myStack.peak();
+		INode deQueu = myStack.pop();
 		myStack.printStack();
 		Assert.assertEquals(myFirstNode, peak);
 	}
