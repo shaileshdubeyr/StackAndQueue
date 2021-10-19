@@ -68,7 +68,7 @@ public class LinkedListTest {
 			tempNode = tempNode.getNext();
 		}
 		this.tail = tempNode;
-		 head.getNext().setNext(null);
+		head.getNext().setNext(null);
 		return tempNode;
 	}
 	

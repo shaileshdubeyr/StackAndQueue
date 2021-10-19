@@ -13,7 +13,6 @@ public class LinkedListMain {
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
-		System.out.println("adding node first");
 		myLinkedList.printMyNodes();
 		boolean result = myLinkedList.head.equals(myThirdNode) && 
 						 myLinkedList.head.getNext().equals(mySecondNode)&&
@@ -31,7 +30,6 @@ public class LinkedListMain {
 		myLinkedList.add(myFirstNode);
 		myLinkedList.appendNodes(mySecondNode);
 		myLinkedList.appendNodes(myThirdNode);
-		System.out.println("adding node last");
 		myLinkedList.printMyNodes();
 		boolean result = myLinkedList.head.equals(myFirstNode) && 
 						 myLinkedList.head.getNext().equals(mySecondNode) &&
@@ -49,8 +47,6 @@ public class LinkedListMain {
 		myLinkedList.add(myFirstNode);
 		myLinkedList.appendNodes(myThirdNode);
 		myLinkedList.insert(myFirstNode, mySecondNode);
-		System.out.println("adding node in between");
-
 		myLinkedList.printMyNodes();
 		boolean result = myLinkedList.head.equals(myFirstNode) && 
 						 myLinkedList.head.getNext().equals(mySecondNode)&& 
