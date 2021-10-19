@@ -105,7 +105,7 @@ public class LinkedListMain {
 		myLinkedList.add(myThirdNode);
 		INode getNode = myLinkedList.findNode();
 		Node<Integer> newNode = new Node<>(40);
-		myLinkedList.insert(getNode, newNode);
+		myLinkedList.deleteInbetween(getNode,myFirstNode);
 		myLinkedList.printMyNodes();
 		boolean result = myLinkedList.head.equals(myThirdNode) &&
 						 myLinkedList.head.getNext().equals(mySecondNode);

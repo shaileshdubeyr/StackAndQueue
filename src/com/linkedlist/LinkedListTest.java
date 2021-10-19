@@ -71,16 +71,27 @@ public class LinkedListTest {
 		 head.getNext().setNext(null);
 		return tempNode;
 	}
+	
+	public void deleteInbetween(INode getNode, INode setNode) {
+		int i = 0;
+		final int ONE = 1;
+		INode temp = this.head;
+		getNode.setNext(setNode);
+		while(temp.getNext() != null) {
+			temp = temp.getNext();
+			i++;
+		}
+		System.out.println(""+(i+ONE));		
+	}
+	
 	public INode findNode() {
-		System.out.println("enter the key to search node");
+	System.out.println("enter the key to search node");
 		Scanner sc = new Scanner(System.in);
 		int searchValue  = sc.nextInt();
 		INode tempNode = head;
-		while(!tempNode.getKey().equals(searchValue) ) {
+		while(!tempNode.getKey().equals(30) ) {
 			tempNode = tempNode.getNext();
 		}
 		return tempNode;
-	}
-	
-	
+	}	
 }
