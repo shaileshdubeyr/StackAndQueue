@@ -14,9 +14,8 @@ public class LinkedListMain {
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
 		myLinkedList.printMyNodes();
-		boolean result = myLinkedList.head.equals(myThirdNode) && 
-						 myLinkedList.head.getNext().equals(mySecondNode)&&
-						 myLinkedList.tail.equals(myFirstNode);
+		boolean result = myLinkedList.head.equals(myThirdNode) && myLinkedList.head.getNext().equals(mySecondNode)
+				&& myLinkedList.tail.equals(myFirstNode);
 		Assert.assertTrue(result);
 	}
 
@@ -30,12 +29,11 @@ public class LinkedListMain {
 		myLinkedList.appendNodes(mySecondNode);
 		myLinkedList.appendNodes(myThirdNode);
 		myLinkedList.printMyNodes();
-		boolean result = myLinkedList.head.equals(myFirstNode) && 
-						 myLinkedList.head.getNext().equals(mySecondNode) &&
-						 myLinkedList.tail.equals(myThirdNode);		
+		boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode)
+				&& myLinkedList.tail.equals(myThirdNode);
 		Assert.assertTrue(result);
 	}
-	
+
 	@Test
 	public void given3NumbersWhenInsertingSecondInBetweenShouldPassLinkedListResult() {
 		Node<Integer> myFirstNode = new Node<>(56);
@@ -46,12 +44,11 @@ public class LinkedListMain {
 		myLinkedList.appendNodes(myThirdNode);
 		myLinkedList.insert(myFirstNode, mySecondNode);
 		myLinkedList.printMyNodes();
-		boolean result = myLinkedList.head.equals(myFirstNode) && 
-						 myLinkedList.head.getNext().equals(mySecondNode)&& 
-						 myLinkedList.tail.equals(myThirdNode);
+		boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode)
+				&& myLinkedList.tail.equals(myThirdNode);
 		Assert.assertTrue(result);
 	}
-	
+
 	@Test
 	public void givenFirstElementWhenDeletedShouldPassLinkedListResult() {
 		Node<Integer> myFirstNode = new Node<>(56);
@@ -64,12 +61,11 @@ public class LinkedListMain {
 		myLinkedList.pop();
 		System.out.println("deleting head first node");
 		myLinkedList.printMyNodes();
-		boolean result = myLinkedList.head.equals(mySecondNode) &&
-						 myLinkedList.head.getNext().equals(myThirdNode) &&
-						 myLinkedList.tail.equals(myThirdNode);
+		boolean result = myLinkedList.head.equals(mySecondNode) && myLinkedList.head.getNext().equals(myThirdNode)
+				&& myLinkedList.tail.equals(myThirdNode);
 		Assert.assertTrue(result);
 	}
-	
+
 	@Test
 	public void givenFirstElementDeletedLastShouldPassLinkedListResult() {
 		Node<Integer> myFirstNode = new Node<>(70);
@@ -82,12 +78,11 @@ public class LinkedListMain {
 		myLinkedList.popLastNode();
 		System.out.println("deleting last node");
 		myLinkedList.printMyNodes();
-		boolean result = myLinkedList.head.equals(myThirdNode) &&
-						 myLinkedList.head.getNext().equals(mySecondNode);
-						 myLinkedList.tail.equals(mySecondNode);	
+		boolean result = myLinkedList.head.equals(myThirdNode) && myLinkedList.head.getNext().equals(mySecondNode);
+		myLinkedList.tail.equals(mySecondNode);
 		Assert.assertTrue(result);
 	}
-	
+
 	@Test
 	public void giveElementInsertNewNodeAfterKeyNodeShouldPassLinkedListResult() {
 		Node<Integer> myFirstNode = new Node<>(70);
@@ -99,12 +94,31 @@ public class LinkedListMain {
 		myLinkedList.add(myThirdNode);
 		INode getNode = myLinkedList.findNode();
 		Node<Integer> newNode = new Node<>(40);
-		myLinkedList.deleteInbetween(getNode,myFirstNode);
+		myLinkedList.deleteInbetween(getNode, myFirstNode);
 		myLinkedList.printMyNodes();
 		myLinkedList.size();
-		boolean result = myLinkedList.head.equals(myThirdNode) &&
-						 myLinkedList.head.getNext().equals(mySecondNode);
-						 myLinkedList.tail.equals(mySecondNode);	
-		Assert.assertTrue(result); 
+		boolean result = myLinkedList.head.equals(myThirdNode) && myLinkedList.head.getNext().equals(mySecondNode);
+		myLinkedList.tail.equals(mySecondNode);
+		Assert.assertTrue(result);
+	}
+	
+	@Test
+	public void giveElementInsertNewNodeAfterKeyNodeShouldPassLinkedListResults() {
+		Node<Integer> myFirstNode = new Node<>(56);
+		Node<Integer> mySecondNode = new Node<>(30);
+		Node<Integer> myThirdNode = new Node<>(40);
+		Node<Integer> myForthNode = new Node<>(70);
+		LinkedListTest myLinkedList = new LinkedListTest();
+		INode getNode = myLinkedList.findNode();
+		myLinkedList.addByCompare(myFirstNode);
+		myLinkedList.addByCompare(mySecondNode);
+		myLinkedList.addByCompare(myThirdNode);
+		myLinkedList.addByCompare(myForthNode);
+		myLinkedList.deleteInbetween(getNode, myFirstNode);
+		myLinkedList.printMyNodes();
+		myLinkedList.size();
+		boolean result = myLinkedList.head.equals(myThirdNode) && myLinkedList.head.getNext().equals(mySecondNode);
+		myLinkedList.tail.equals(mySecondNode);
+		Assert.assertTrue(result);
 	}
 }
