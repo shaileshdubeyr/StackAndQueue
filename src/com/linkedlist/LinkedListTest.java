@@ -62,10 +62,17 @@ public class LinkedListTest {
 		return tempNode;	
 	}
 	
+<<<<<<< HEAD
 	public INode dequeue() {
 		INode tempNode = this.head;
 		this.head = head.getNext();
 		return tempNode;	
+=======
+	public INode deQueue() {
+		INode tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;
+>>>>>>> QueueUC3
 	}
 	
 	public INode popLastNode() {

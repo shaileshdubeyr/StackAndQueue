@@ -31,7 +31,11 @@ public class Queue {
 	}
 
 	public INode dequeu() {
+<<<<<<< HEAD
 		return myLinkedList.dequeue();
+=======
+		return myLinkedList.deQueue();
+>>>>>>> QueueUC3
 
 	}
 }
