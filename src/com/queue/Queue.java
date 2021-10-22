@@ -21,10 +21,6 @@ public class Queue {
 		return myLinkedList.head;
 	}
 
-	public INode pop() {
-		return myLinkedList.pop();
-	}
-
 	public void enqueu(INode myNode) {
 		myLinkedList.appendNodes(myNode);
 
