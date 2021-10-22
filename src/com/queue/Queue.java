@@ -5,6 +5,7 @@ import com.linkedlist.LinkedListTest;
 
 public class Queue {
 	private final LinkedListTest myLinkedList;
+	
 	public Queue() {
 		this.myLinkedList = new LinkedListTest();
 	}
@@ -21,13 +22,15 @@ public class Queue {
 		return myLinkedList.head;
 	}
 
-	public void enqueu(INode myNode) {
-		myLinkedList.appendNodes(myNode);
-
+	public INode pop() {
+		return myLinkedList.pop();
 	}
 
-	public INode dequeu() {
-		return myLinkedList.deQueue();
+	public void enqueu(INode myNode) {
+		myLinkedList.appendNodes(myNode);
+	}
 
+	public INode deQueu() {
+		return myLinkedList.deQueue();
 	}
 }

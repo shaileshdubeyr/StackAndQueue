@@ -1,6 +1,6 @@
 bin
 .classpath
 .project
-D:\work\LinkedList\src\com\hastable
-D:\work\LinkedList\src\com\linkedlist
-D:\work\LinkedList\src\com\stack
+src\com\hastable
+src\com\linkedlist
+src\com\stack
