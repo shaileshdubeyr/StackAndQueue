@@ -1,8 +1,6 @@
-package Stack;
-
-import com.linkedlist.LinkedListTest;
-import com.linkedlist.INode;
-import com.linkedlist.Node;
+package com.stack;
+ 
+import com.linkedlist.*;
 
 public class Stack {
 	private final LinkedListTest myLinkedList;

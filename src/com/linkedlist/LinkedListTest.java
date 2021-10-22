@@ -49,84 +49,59 @@ public class LinkedListTest {
 			this.tail = myNode;
 		}
 	}
-
+	
 	public void insert(INode myNode, INode newNode) {
 		INode tempNode = myNode.getNext();
 		myNode.setNext(newNode);
 		newNode.setNext(tempNode);
 	}
-
+	
 	public INode pop() {
 		INode tempNode = this.head;
 		this.head = head.getNext();
-		return tempNode;
+		return tempNode;	
 	}
-
+	
+	public INode dequeue() {
+		INode tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;	
+	}
+	
 	public INode popLastNode() {
 		INode tempNode = head;
-		while (tempNode.getNext() != null) {
+		while(tempNode.getNext() != null) {
 			tempNode = tempNode.getNext();
 		}
 		this.tail = tempNode;
 		head.getNext().setNext(null);
 		return tempNode;
 	}
-
+	
 	public void deleteInbetween(INode getNode, INode setNode) {
 		INode temp = this.head;
 		getNode.setNext(setNode);
 	}
-
+	
 	public void size() {
 		int i = 0;
 		final int ONE = 1;
 		INode temp = this.head;
-		while (temp.getNext() != null) {
+		while(temp.getNext() != null) {
 			temp = temp.getNext();
 			i++;
 		}
-		System.out.println("the total nodes are " + (i + ONE));
+		System.out.println("the total nodes are "+(i+ONE));		
 	}
-
+	
 	public INode findNode() {
 		System.out.println("enter the key to search node");
-		Scanner sc = new Scanner(System.in);
-		int searchValue = sc.nextInt();
-		INode tempNode = head;
-		while (!tempNode.getKey().equals(searchValue)) {
-			tempNode = tempNode.getNext();
-		}
-		return tempNode;
-	}
-
-	public void addByCompare(INode newNode) {
-		if (this.tail == null) {
-			this.tail = newNode;
-		}
-		if (this.head == null) {
-			this.head = newNode;
-			System.out.println(newNode.getKey());
-			System.out.println("one");
-		} else {
-
-			INode tempNode = this.head;
-			while (true) {
-				if (tempNode.getKey().compareTo(newNode.getKey()) > 0) {
-					this.head = newNode;
-					this.head.setNext(tempNode);
-					System.out.println("this");
-					System.out.println(newNode.getKey());
-					if (tempNode.getNext() == null)
-						break;
-				} else {
-					INode temp2 = this.head;
-					this.head.setNext(tempNode);
-					tempNode.setNext(temp2.getNext().getNext());
-					System.out.println("there 2");
-					break;
-				}
-				tempNode.getNext();
+			Scanner sc = new Scanner(System.in);
+			int searchValue  = sc.nextInt();
+			INode tempNode = head;
+			while(!tempNode.getKey().equals(30) ) {
+				tempNode = tempNode.getNext();
 			}
+			return tempNode;
 		}
-	}
 }
